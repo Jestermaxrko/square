@@ -12,8 +12,11 @@ var epilepsia_timer;
 var records = [];
 var game_is_started=false;
 
+var square_size;
+
 var width  ;
 var heigth ;
+deviceOptions();
 initFirebase();
 readRecordBoard();
 
@@ -88,20 +91,33 @@ function createTable(color_pos){
 	}
 }
 
+function deviceOptions(){
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		square_size = 50;
+	}
+	else{
+		square_size = window.innerWidth*0.8*0.05;
+	}
+
+} 
 
 
 function createSquare(color){
 	var element = document.createElement("div");
 	element.style.backgroundColor = color;
 	element.style.border = "   1px solid black;";
-	element.style.height = "30px";
+	element.style.height = square_size+"px";
+	element.style.width = square_size+"px";;
 	element.style.position ="absolute";
-	element.style.width = "30px";
+	
 
 	var w = window.innerWidth*0.8;
 	var h = window.innerHeight*0.8;
-	element.style.left = generateCoordinate(w-30)+"px";
-	element.style.top = generateCoordinate(h-30)+"px";
+
+
+	element.style.left = generateCoordinate(w-square_size)+"px";
+	element.style.top = generateCoordinate(h-square_size)+"px";
 	document.getElementById("field").style.width = w+"px";
 	document.getElementById("field").style.height =  h+"px";
 
@@ -225,7 +241,6 @@ function genereteAdditionalConnditions(){
 		default:
 			document.getElementById("field").style.backgroundColor="#ccc";break;
 	}
-
 }
 
 
@@ -239,7 +254,6 @@ function endEpilepsiaMode(){
 	clearInterval(epilepsia_timer);
 	epilepsia_score=0;
 }
-
 
 
 function clickedRed(){
