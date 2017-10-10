@@ -2,7 +2,6 @@
 	background-color: #ccc;
 	display: none;
 	margin: auto;
-	
 	color: #373c4f;
 	text-align: center;
 	position: relative;
@@ -51,6 +50,7 @@ a:hover{
 
 table{
 	
+	font-size: 1.25rem;
 	font-weight: bold;
 	color: #373c4f;
 	margin: 0 auto;
