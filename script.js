@@ -283,7 +283,7 @@ function addRecord(){
 	
 		for(var i=0;i<records.length;i++){
 			
-			if(score>=records[i].score){
+			if(score>records[i].score){
 				position=i;
 				records[position].score=score;
 				records[position].username=user_name;
