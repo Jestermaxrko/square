@@ -97,7 +97,7 @@ function deviceOptions(){
 		square_size = 50;
 	}
 	else{
-		square_size = window.innerWidth*0.8*0.05;
+		square_size = window.innerWidth*0.8*0.1;
 	}
 
 } 
