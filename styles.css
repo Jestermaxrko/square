@@ -1,3 +1,9 @@
+
+body{
+	background-color:#eff5f5;
+	font-family: "Trebuchet MS";
+}
+
 #field{
 	background-color: #ccc;
 	display: none;
@@ -9,20 +15,58 @@
 
 
 #start_page {
-	font-family: "Trebuchet MS";
+	
 	text-align: center;
 }
 
-h1,h2,a {
+.red{
+	color:red;
+}
+
+h1,h2,h3,a {
 	text-align: center;
 }
 
-h2{
+h1{
+	font-family: "Tahoma";
+	text-transform: uppercase;
+}
+
+h1,h2,h3{
+	color: #383838;
+}
+
+h3,h2{
 	margin: 0;
 }
 
+.score_all{
+	color:#688ecc;
+}
+
 input{
-	margin-top:10px; 
+	opacity: 1;
+	box-sizing: border-box;
+	border-radius: 10px;
+	padding: 12px 20px;
+	border: 2px solid #ccc;
+	color:#c4c4c4;
+	font-weight: bold;
+	margin: auto;
+	margin-top:10px;
+	margin-bottom: 10px;
+	width: 20%;
+}
+
+input::placeholder{
+	color:#ccc;
+}
+
+input[type=text]:focus {
+    border: 2px solid #688ecc;
+    color:#688ecc;
+    outline: 0;
+
 }
 
 a{	
@@ -41,13 +85,13 @@ a{
 
 a:hover{
 
-	background-color: #d8d8d8;
+	background-color: #688ecc;
+	color:white;
 
 
 }
 
 table{
-	
 	font-weight: bold;
 	color: #373c4f;
 	margin: 0 auto;
@@ -59,9 +103,13 @@ table{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+table td{ 
+	border: none 
+}
+
+
 table td:last-child{
   text-align: right;
-
 }
 
 table td:first-child{
@@ -73,10 +121,12 @@ table td + td{
 	text-align: left;
 }
 
+
 @media only screen and (max-width: 900px) {
     table,a {
         font-size: 0.75rem;    }
 
     h1 { font-size: 0.9rem; }
-    h2 { font-size: 0.8rem; }
+    h2 { font-size: 0.8rem }
+    h3 { font-size: 0.75rem; }
 }

@@ -1,6 +1,6 @@
 var GREEN = "green";
 var RED = "red";
-var ORRANGE = "#ff7c19";
+var ORRANGE = "#d32a08";
 var score=0;
 var epilepsia_score=0;
 var special_score = 0;
@@ -12,11 +12,10 @@ var epilepsia_timer;
 var records = [];
 var game_is_started=false;
 
-var square_size;
+var square_size=30;
 
 var width  ;
 var heigth ;
-deviceOptions();
 initFirebase();
 readRecordBoard();
 
@@ -91,17 +90,6 @@ function createTable(color_pos){
 	}
 }
 
-function deviceOptions(){
-
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		square_size = 50;
-	}
-	else{
-		square_size=30;
-	}
-
-} 
-
 
 function createSquare(color){
 	var element = document.createElement("div");
@@ -114,7 +102,6 @@ function createSquare(color){
 
 	var w = window.innerWidth*0.8;
 	var h = window.innerHeight*0.8;
-
 
 	element.style.left = generateCoordinate(w-square_size)+"px";
 	element.style.top = generateCoordinate(h-square_size)+"px";
@@ -174,7 +161,7 @@ function generateField(){
 
 	if(score > 20 && score <=25){
 		condition = Math.floor((Math.random() * 4)+1);
-		interval  = 750
+		interval  = 800
 	}
 
 	if(score > 25){
@@ -304,10 +291,8 @@ function addRecord(){
 			}
 		}
 	document.getElementById("record_table").innerHTML="";
-
-	console.log(position);
 	createTable(position);
-	document.getElementById("color_row").style.color="red";
+	document.getElementById("color_row").style.color="#688ecc";
 }
 
 
@@ -336,9 +321,9 @@ function stopGame(){
 			addRecord();
 		}
 		else 
-			document.getElementById("color_row").style.color="black";
+			document.getElementById("color_row").style.color="#373c4f";
 		
-		document.getElementById("score_start").innerHTML = "You lost<br> Your Score : " +score;
+		document.getElementById("score_start").innerHTML = "Your Score : " +score;
 		document.getElementById("score_start").style.display="block";
 		document.getElementById("field").style.display="none";
 		document.getElementById("start_page").style.display="block";
