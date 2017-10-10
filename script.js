@@ -95,6 +95,7 @@ function deviceOptions(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		square_size = 50;
+		document.getElementById("start_page").style.margin ="0";
 	}
 	else{
 		square_size = window.innerWidth*0.8*0.1;
