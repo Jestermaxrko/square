@@ -12,23 +12,21 @@
 	font-family: "Trebuchet MS";
 	text-align: center;
 }
-#color_row {
-	
-}
-
 
 h1,h2,a {
 	text-align: center;
 }
 
+h2{
+	margin: 0;
+}
 
 input{
 	margin-top:10px; 
-	margin-bottom: 20px;
 }
 
 a{	
-	margin-top: 10px;
+	
 	text-decoration: none;
 	font-family: Arial;
 	font-weight: bold;
@@ -50,7 +48,6 @@ a:hover{
 
 table{
 	
-	font-size: 1.25rem;
 	font-weight: bold;
 	color: #373c4f;
 	margin: 0 auto;
@@ -74,4 +71,12 @@ table td:first-child{
 
 table td + td{
 	text-align: left;
+}
+
+@media only screen and (max-width: 900px) {
+    table,a {
+        font-size: 0.75rem;    }
+
+    h1 { font-size: 0.9rem; }
+    h2 { font-size: 0.8rem; }
 }

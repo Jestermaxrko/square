@@ -94,8 +94,7 @@ function createTable(color_pos){
 function deviceOptions(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		square_size = window.innerWidth*0.8*0.5;
-		document.getElementById("start_page").style.margin ="0";
+		square_size = 50;
 	}
 	else{
 		square_size=30;
@@ -109,7 +108,7 @@ function createSquare(color){
 	element.style.backgroundColor = color;
 	element.style.border = "   1px solid black;";
 	element.style.height = square_size+"px";
-	element.style.width = square_size+"px";;
+	element.style.width = square_size+"px";
 	element.style.position ="absolute";
 	
 
@@ -321,7 +320,7 @@ function startGame() {
 
 	game_is_started=true;
 	//document.getElementById("start_page").style.display="none";
-	document.getElementById("score_start").innerHTML="";
+	document.getElementById("score_start").style.display="none";
 	document.getElementById("start_page").style.display="none";
 	document.getElementById("field").style.display="block";
 	//document.getElementById("name").style.display="none";
@@ -340,6 +339,7 @@ function stopGame(){
 			document.getElementById("color_row").style.color="black";
 		
 		document.getElementById("score_start").innerHTML = "You lost<br> Your Score : " +score;
+		document.getElementById("score_start").style.display="block";
 		document.getElementById("field").style.display="none";
 		document.getElementById("start_page").style.display="block";
 		document.getElementById("score").innerHTML ="";
