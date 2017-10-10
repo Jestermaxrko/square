@@ -318,9 +318,18 @@ function startGame() {
 		document.getElementById("name").style.border = "solid 2px red";
 		setTimeout(function(){
 			document.getElementById("name").style.border = "solid 2px #ccc";
+			document.getElementById("name").focus();
 		},750);
 	}
 }
+
+
+function keyPressed(){
+	if (event.keyCode == 13)
+		startGame();
+                        
+}
+
 
 function stopGame(){
 		clearInterval(timer);
