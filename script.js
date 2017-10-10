@@ -94,11 +94,11 @@ function createTable(color_pos){
 function deviceOptions(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		square_size = 50;
+		square_size = window.innerWidth*0.8*0.5;
 		document.getElementById("start_page").style.margin ="0";
 	}
 	else{
-		square_size = window.innerWidth*0.8*0.5;
+		square_size=30;
 	}
 
 } 
