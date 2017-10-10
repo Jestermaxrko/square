@@ -279,19 +279,22 @@ function addRecord(){
 			    score: score
 			  	});
 
-
-	
-		for(var i=0;i<records.length;i++){
-			
-			if(score>records[i].score){
-				position=i;
-				records[position].score=score;
-				records[position].username=user_name;
-				break;
-			}
+	var index;
+	for(var j=0;j<records.length;j++){
+		if(score>records[j].score){
+			index=j;break;
 		}
+	}
+	records.splice(index, 0, {
+		username:user_name,
+		score:score
+	});
+
+	records= records.filter(function(number,i) {
+  		if(i<10) return number;});
+
 	document.getElementById("record_table").innerHTML="";
-	createTable(position);
+	createTable(index);
 	document.getElementById("color_row").style.color="#688ecc";
 }
 
