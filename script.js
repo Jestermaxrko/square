@@ -98,7 +98,7 @@ function deviceOptions(){
 		document.getElementById("start_page").style.margin ="0";
 	}
 	else{
-		square_size = window.innerWidth*0.8*0.1;
+		square_size = window.innerWidth*0.8*0.5;
 	}
 
 } 
