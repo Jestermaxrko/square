@@ -1,6 +1,6 @@
 var GREEN = "green";
 var RED = "red";
-var ORRANGE = "#d32a08";
+var ORRANGE = "#ff4d1c";
 var score=0;
 var epilepsia_score=0;
 var special_score = 0;
