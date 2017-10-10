@@ -242,7 +242,6 @@ function endEpilepsiaMode(){
 	epilepsia_score=0;
 }
 
-
 function clickedRed(){
 	score++;
 	document.getElementById("score").innerHTML = "Score :" +score;
@@ -301,20 +300,26 @@ function addRecord(){
 
 function startGame() {
 
-
-	var heigth  = window.innerHeight; 
-	var width = window.innerWidth;
-
-
-	game_is_started=true;
-	//document.getElementById("start_page").style.display="none";
-	document.getElementById("score_start").style.display="none";
-	document.getElementById("start_page").style.display="none";
-	document.getElementById("field").style.display="block";
-	//document.getElementById("name").style.display="none";
-	generateField();
-	timer = setInterval(generateField,interval);
-	event.cancelBubble=true;
+	console.log(document.getElementById("name").value);
+	
+	if(document.getElementById("name").value){
+		var heigth  = window.innerHeight; 
+		var width = window.innerWidth;
+		game_is_started=true;
+		//document.getElementById("start_page").style.display="none";
+		document.getElementById("score_start").style.display="none";
+		document.getElementById("start_page").style.display="none";
+		document.getElementById("field").style.display="block";
+		//document.getElementById("name").style.display="none";
+		generateField();
+		timer = setInterval(generateField,interval);
+		event.cancelBubble=true;
+	}else {
+		document.getElementById("name").style.border = "solid 2px red";
+		setTimeout(function(){
+			document.getElementById("name").style.border = "solid 2px #ccc";
+		},750);
+	}
 }
 
 function stopGame(){
