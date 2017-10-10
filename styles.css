@@ -13,7 +13,9 @@ body{
 	position: relative;
 }
 
-
+#square{
+	border: 1px solid black;
+}
 #start_page {
 	
 	text-align: center;

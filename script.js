@@ -1,6 +1,6 @@
 var GREEN = "green";
 var RED = "red";
-var ORRANGE = "#ff4d1c";
+var ORRANGE = "#b74900";
 var score=0;
 var epilepsia_score=0;
 var special_score = 0;
@@ -98,7 +98,7 @@ function createSquare(color){
 	element.style.height = square_size+"px";
 	element.style.width = square_size+"px";
 	element.style.position ="absolute";
-	
+	element.id ="square";
 
 	var w = window.innerWidth*0.8;
 	var h = window.innerHeight*0.8;
