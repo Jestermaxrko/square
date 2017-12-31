@@ -19,7 +19,6 @@ var heigth ;
 initFirebase();
 readRecordBoard();
 
-
 function initFirebase(){
 	 var config = {
     apiKey: "AIzaSyCdjnMExwj_JahV2YJ7KWZiiwpFe8QndV4",
@@ -330,6 +329,7 @@ function keyPressed(){
 		startGame();
                         
 }
+
 
 function stopGame(){
 		clearInterval(timer);
